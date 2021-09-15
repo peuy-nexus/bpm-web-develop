@@ -23,9 +23,36 @@ export default class AppSystemList extends ListPage {
     console.log("row", row);
   }
 
+  // 获取数据
+  getData(){
+    const loading = this.$loading(ConstantMgr.loadingOption);
+    AppSystemApi.query({ uuid: this.roleId })
+      .then((resp: any) => {
+        this.userData = resp.data;
+        loading.close();
+      })
+      .catch((error: any) => {
+        loading.close();
+        this.$error(error);
+      });
+  }
+
   doListLoad(param: any = {}) {
     console.log('搜索并展示');
     const loading = this.$loading(ConstantMgr.loadingOption);
+
+    // 0915 查询
+    for (const key in this.filterParams) {
+      const value = this.filterParams[key];
+      if (Array.isArray(value)) {
+        if (value.length) {
+          param.filters.push({ property: key, value });
+        }
+      } else if (value !== undefined && value !== null && value !== "") {
+        param.filters.push({ property: key, value });
+      }
+    }
+
     AppSystemApi.query(
       Object.assign(
         param,
@@ -37,8 +64,8 @@ export default class AppSystemList extends ListPage {
     )
       .then((resp: any) => {
         loading.close();
-        this.rowData = resp.data.records;
-        this.rowTotal = resp.data.recordCount;
+        this.rowData = resp.data.records; // 列表数据
+        this.rowTotal = resp.data.recordCount; // 列表个数
       })
       .catch(error => {
         loading.close();
