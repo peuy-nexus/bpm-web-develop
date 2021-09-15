@@ -1,0 +1,95 @@
+// 横向
+.flex {
+  display: flex;
+}
+.flexC {
+  display: flex;
+  align-items: center;
+}
+.flexCC {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flexCW {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flexCA {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.flexCB {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// 纵向
+.flexV {
+  display: flex;
+  flex-direction: column;
+}
+.flexVC {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flexVCC {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-auto {
+  flex: 1;
+}
+
+// tag状态字体颜色
+// 已完成
+/deep/ .el-tag--success,
+/deep/ .el-tag.el-tag--success {
+  color: $--link-color !important;
+  background: rgba(88, 185, 41, 0.08) !important;
+  border: none !important;
+}
+/deep/ .el-tag.el-tag--success.is-dot {
+  background: transparent !important;
+}
+/deep/ .el-tag--success.is-dot:before {
+  background-color: $--link-color !important;
+}
+// 未完成
+/deep/ .el-tag--waring,
+/deep/ .el-tag.el-tag--warning {
+  color: $--color-warning !important;
+  background: rgba(239, 130, 30, 0.08) !important;
+  border: none !important;
+}
+/deep/ .el-tag.el-tag--warning.is-dot {
+  background: transparent !important;
+}
+/deep/ .el-tag--waring.is-dot:before {
+  background-color: $--color-warning !important;
+}
+// 已过期
+/deep/ .el-tag--error,
+/deep/ .el-tag.el-tag--error {
+  color: $--color-text-secondary !important;
+  background: rgba(230, 230, 230, 0.3) !important;
+  border: none !important;
+}
+/deep/ .el-tag.el-tag--error.is-dot {
+  background: transparent !important;
+}
+/deep/ .el-tag--error.is-dot:before {
+  background-color: $--color-text-secondary !important;
+}
+// 带点状态
+/deep/ .el-tag--error.is-dot {
+  border: none !important;
+  background-color: transparent !important;
+}

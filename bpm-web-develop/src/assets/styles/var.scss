@@ -1,0 +1,50 @@
+// $--color-primary: #08A440 !default;
+// $--font-size-base: 13px !default;
+// $--font-size-small: 14px !default; // 左侧导航，选中加粗，表头等正文级别的重要信息
+$--font-path: "~fant-ui/lib/theme-chalk/fonts";
+$--color-white: #ffffff !default;
+$--color-primary: #1597ffff !default;
+$--color-success: #58b929;
+$--color-danger: #de3232;
+$--color-normalcy: #318bff;
+$--color-prepared: #ef821eff;
+
+$--font-size-base: 13px;
+$--font-size-extra-small: 12px;
+$--dialog-title-font-size: 16px;
+
+@import "~fant-ui/packages/theme-chalk/src/common/var";
+// @import '~fant-ui/packages/theme-chalk/src/index';
+
+$--menu-item-hover-fill: #79879e !default;
+
+$--color-text-secondary-light-9: mix($--color-white, $--color-text-secondary, 90%) !default; // #F1F3F5
+$--color-normalcy-extra-lighter: mix($--color-white, $--color-normalcy, 90%) !default; // #EAF3FF
+
+$--background-color-base-light-1: mix($--color-white, $--background-color-base, 10%) !default; // #F2F3F7
+$--background-color-base-light-2: mix($--color-white, $--background-color-base, 20%) !default; // #F3F5F8
+$--background-color-base-light-4: mix($--color-white, $--background-color-base, 40%) !default; // #F6F7FA
+$--background-color-base-light-5: mix($--color-white, $--background-color-base, 50%) !default; // #F8F9FB
+$--background-color-base-light-6: mix($--color-white, $--background-color-base, 60%) !default; // #F9FAFB
+$--background-color-base-light-8: mix($--color-white, $--background-color-base, 80%) !default; // #FCFCFD
+
+$--background-color-success-light-8: mix($--color-white, $--color-success, 80%) !default;
+$--background-color-danger-light-8: mix($--color-white, $--color-danger, 80%) !default;
+
+$--color-text-primary-light-7: mix($--color-white, $--color-text-primary, 70%) !default;
+$--color-hover: mix($--color-white, $--color-black, 90%) !default;
+
+$--font-weight-bold: 600 !default;
+$--font-weight-medium: 500 !default;
+$--font-weight-secondary: 400 !default;
+$--font-weight-regular: 400 !default;
+
+// $--color-primary-light-1 #FF841A;
+// $--color-primary-light-2 #FF9133;
+// $--color-primary-light-3 #FF9F4D;
+// $--color-primary-light-4 #FFAD66;
+// $--color-primary-light-5 #FFBB80;
+// $--color-primary-light-6 #FFC899;
+// $--color-primary-light-7 #FFD6B3;
+// $--color-primary-light-8 #FFE4CC;
+// $--color-primary-light-9 #FFF1E6;

@@ -1,0 +1,16 @@
+.prom-field-control-item {
+  /deep/ .el-form-item__label {
+    padding-right: 32px;
+    position: relative;
+    &::after {
+      content: "";
+      width: 1px;
+      height: 16px;
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+      background: $--border-color-base;
+    }
+  }
+}

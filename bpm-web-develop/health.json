@@ -1,0 +1,7 @@
+{
+  "name": "hdbpm",
+  "description": "hdbpm",
+  "version": "#{version}",
+  "timestamp": "#{timestamp}",
+  "state": 1
+}
