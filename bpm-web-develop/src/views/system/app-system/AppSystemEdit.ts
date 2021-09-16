@@ -52,7 +52,8 @@ export default class AppSystemEdit extends Vue {
       AppSystemApi.create(this.entity)
         .then((res: any) => {
           console.log("res", res);
-          this.$router.push({ name: "AppSystemView", query: { uuid: res } });
+          // this.$router.push({ name: "AppSystemView", query: { uuid: res } }); // 0915
+          this.$router.push({ name: "AppSystemList", query: { uuid: res } });
         })
         .catch(this.$error);
     });

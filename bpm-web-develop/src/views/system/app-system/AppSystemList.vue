@@ -82,19 +82,22 @@
           <span slot="header" :title="$t('公共.表格列/操作')" class="ellipsis">
             {{ $t("公共.表格列/操作") }}
           </span>
+<!--          -->
           <template slot-scope="{ row }">
-            <el-button @click="doEdit(row)" type="text">{{ $t("公共.操作/编辑") }}</el-button>
+            <el-button @click="doEdit(row)"  type="text">{{ $t("公共.操作/编辑") }}</el-button>
             <popover-button @confirm="doDelete(row)" v-if="hasPermission(permission.bpmAppSystemDelete)">
               <span>{{ $t("公共.操作/删除") }}</span>
               <span slot="tip">{{ $t("公共.操作/删除/提示语") }}</span>
             </popover-button>
           </template>
+<!--          -->
         </el-table-column>
       </list-view>
     </template>
   </page-wrapper>
 </template>
 
-<script lang="ts" src="./AppSystemList.ts"></script>
+<script lang="ts" src="./AppSystemList.ts">
+</script>
 
 <style lang="scss"></style>
