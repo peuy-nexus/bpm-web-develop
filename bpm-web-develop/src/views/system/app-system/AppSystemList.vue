@@ -82,15 +82,39 @@
           <span slot="header" :title="$t('公共.表格列/操作')" class="ellipsis">
             {{ $t("公共.表格列/操作") }}
           </span>
-<!--          -->
+          <el-dialog :title="$t('公共.操作/编辑')" :visible.sync="editFormVisible" width="45%" :append-to-body=true>
+            <el-form :model="editForm" ref="createRoleRuleForm" :rules="rules">
+              <el-row>
+                <el-form-item :label="$t('流程中心.系统管理/应用系统/代码')" prop="code">
+                  <el-input
+                    v-model="editForm.code"
+                    autocomplete="off"
+                    :placeholder="$t('流程中心.系统管理/应用系统/代码/输入提示')"
+                  ></el-input>
+                </el-form-item>
+              </el-row>
+              <el-row>
+                <el-form-item :label="$t('流程中心.系统管理/应用系统/名称')" prop="name">
+                  <el-input
+                    v-model="editForm.name"
+                    autocomplete="off"
+                    :placeholder="$t('流程中心.系统管理/应用系统/名称/输入提示')"
+                  ></el-input>
+                </el-form-item>
+              </el-row>
+            </el-form>
+            <div slot="footer" class="dialog-footer">
+              <el-button @click="doEdit" type="text">{{ $t("公共.操作/编辑") }}</el-button>
+              <el-button @click="editCancel" type="text">{{ $t("公共.操作/取消") }}</el-button>
+            </div>
+          </el-dialog>
           <template slot-scope="{ row }">
-            <el-button @click="doEdit(row)"  type="text">{{ $t("公共.操作/编辑") }}</el-button>
+            <el-button @click="editShow(row)"  type="text">{{ $t("公共.操作/编辑") }}</el-button>
             <popover-button @confirm="doDelete(row)" v-if="hasPermission(permission.bpmAppSystemDelete)">
               <span>{{ $t("公共.操作/删除") }}</span>
               <span slot="tip">{{ $t("公共.操作/删除/提示语") }}</span>
             </popover-button>
           </template>
-<!--          -->
         </el-table-column>
       </list-view>
     </template>
